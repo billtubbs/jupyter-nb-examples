@@ -1,4 +1,5 @@
 import pandas as pd
+
 # Trip expenses
 data = {
     'Food': [38.15, 0, 109.75], 
@@ -7,8 +8,10 @@ data = {
     'Tickets': [0, 134, 0], 
     'Other': [95, 0, 250]
 }
+
 index = ['Diane', 'Kelly', 'John']
 df = pd.DataFrame(data, index=index)
+
 # Calculate amount owing
 df['Total Paid'] = df.sum(axis=1)
 average_cost = df['Total Paid'].mean()
